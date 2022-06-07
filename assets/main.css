@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Rye', cursive;
+}
+body{
+    background-image: url('imgs/background.jpg');
+    padding: 80px;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#root{
+    padding: 10px;
+    border: 3px solid #e793ff;
+    border-radius: 4px;
+    width: 940px;
+    height: 500px;
+    background: #3b0155;
+    position: relative;
+    box-shadow: 0 0px 30px -5px #130032;
+    display: grid;
+    justify-content: center;
+}
+/* block style */
+.block{
+    width: 100px;
+    border-radius: 3px;
+    position: absolute;
+}
+.block-game{
+    height: 30px;
+    background-color: #FF0066;
+    border: 2px solid #ff4c94;
+}
+.block-game-2{
+    background: #baff75;
+    border-color: #ffee91;
+}
+.fire{
+    animation: blockFire 1s ease-in-out backwards;
+}
+.block-user{
+    height: 15px;
+    background: #00c3ff;
+    width: 215px;
+    border: 2px solid #41ffe4;
+}
+/* ball style */
+.ball{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #ff8f00;
+    border: 2px solid #ffe300;
+    box-shadow: 0 0 5px 2px #ff3131;
+}
+/* animation */
+@keyframes blockFire {
+    0%, 100%{
+        border: 3px solid #e793ff;
+        box-shadow: 0 0px 30px -5px #130032;
+    }
+    50%{
+        border: 3px solid red;
+        box-shadow: 0 0px 30px -5px red;
+    }
+}
